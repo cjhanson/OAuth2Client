@@ -91,7 +91,7 @@ NSString * const kNXOAuth2AccountStoreAccountType = @"kNXOAuth2AccountStoreAccou
     static NXOAuth2AccountStore *shared;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        shared = [NXOAuth2AccountStore new];
+        shared = [[NXOAuth2AccountStore alloc] init];
     });
     return shared;
 }
